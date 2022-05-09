@@ -785,6 +785,11 @@ KeyboardOuter.addEventListener('click', (e) => {
       setTimeout(() => KeyA[i].classList.remove('Active'), 200);
     }
   }
+  if (e.target.classList.contains('Backquote')) {
+    Backquote.classList.add('Active');
+
+    setTimeout(() => Backquote.classList.remove('Active'), 200);
+  }
   if (e.target.classList.contains('Ctrl_left')) {
     CtrlLeft.classList.add('Active');
 
