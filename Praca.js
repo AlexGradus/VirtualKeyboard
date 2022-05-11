@@ -21,40 +21,40 @@ const Key1E = document.createElement('div');
 Key1E.className = 'Backquote';
 Key1E.innerHTML = '§';
 const Key2 = document.createElement('div');
-Key2.className = 'Key1 KeyA';
+Key2.className = 'Key1 KeyA KeyA1';
 Key2.innerHTML = '1';
 const Key3 = document.createElement('div');
-Key3.className = 'Key1 KeyA';
+Key3.className = 'Key1 KeyA KeyA2';
 Key3.innerHTML = '2';
 const Key4 = document.createElement('div');
-Key4.className = 'Key1 KeyA';
+Key4.className = 'Key1 KeyA KeyA3';
 Key4.innerHTML = '3';
 const Key5 = document.createElement('div');
-Key5.className = 'Key1 KeyA';
+Key5.className = 'Key1 KeyA KeyA4';
 Key5.innerHTML = '4';
 const Key6 = document.createElement('div');
-Key6.className = 'Key1 KeyA';
+Key6.className = 'Key1 KeyA KeyA5';
 Key6.innerHTML = '5';
 const Key7 = document.createElement('div');
-Key7.className = 'Key1 KeyA';
+Key7.className = 'Key1 KeyA KeyA6';
 Key7.innerHTML = '6';
 const Key8 = document.createElement('div');
-Key8.className = 'Key1 KeyA';
+Key8.className = 'Key1 KeyA KeyA7';
 Key8.innerHTML = '7';
 const Key9 = document.createElement('div');
-Key9.className = 'Key1 KeyA';
+Key9.className = 'Key1 KeyA KeyA8';
 Key9.innerHTML = '8';
 const Key10 = document.createElement('div');
-Key10.className = 'Key1 KeyA';
+Key10.className = 'Key1 KeyA KeyA9';
 Key10.innerHTML = '9';
 const Key11 = document.createElement('div');
-Key11.className = 'Key1 KeyA';
+Key11.className = 'Key1 KeyA KeyA12';
 Key11.innerHTML = '0';
 const Key12 = document.createElement('div');
-Key12.className = 'Key1 KeyA';
+Key12.className = 'Key1 KeyA KeyA10';
 Key12.innerHTML = '-';
 const Key13 = document.createElement('div');
-Key13.className = 'Key1 KeyA';
+Key13.className = 'Key1 KeyA KeyA11';
 Key13.innerHTML = '=';
 const Key14 = document.createElement('div');
 Key14.className = 'Key1 Backspace';
@@ -533,6 +533,18 @@ const ContiOuter = document.querySelector('.ContiOuter');
 const KeyboardOuter = document.querySelector('.KeyboardOuter');
 const KeyA = document.querySelectorAll('.KeyA');
 const IntSlash = document.querySelector('.IntSlash');
+const KeyA1 = document.querySelector('.KeyA1');
+const KeyA2 = document.querySelector('.KeyA2');
+const KeyA3 = document.querySelector('.KeyA3');
+const KeyA4 = document.querySelector('.KeyA4');
+const KeyA5 = document.querySelector('.KeyA5');
+const KeyA6 = document.querySelector('.KeyA6');
+const KeyA7 = document.querySelector('.KeyA7');
+const KeyA8 = document.querySelector('.KeyA8');
+const KeyA9 = document.querySelector('.KeyA9');
+const KeyA10 = document.querySelector('.KeyA10');
+const KeyA11 = document.querySelector('.KeyA11');
+const KeyA12 = document.querySelector('.KeyA12');
 let ShiftPosition = false;
 InputInside.focus();
 for (let i = 0; i < KeyA.length; i += 1) {
@@ -564,6 +576,42 @@ if (Info === 'Russian') {
 }
 
 window.addEventListener('keydown', (e) => {
+  if (e.keyCode === 49) {
+    KeyA1.classList.add('Active');
+  }
+  if (e.keyCode === 50) {
+    KeyA2.classList.add('Active');
+  }
+  if (e.keyCode === 51) {
+    KeyA3.classList.add('Active');
+  }
+  if (e.keyCode === 52) {
+    KeyA4.classList.add('Active');
+  }
+  if (e.keyCode === 53) {
+    KeyA5.classList.add('Active');
+  }
+  if (e.keyCode === 54) {
+    KeyA6.classList.add('Active');
+  }
+  if (e.keyCode === 55) {
+    KeyA7.classList.add('Active');
+  }
+  if (e.keyCode === 56) {
+    KeyA8.classList.add('Active');
+  }
+  if (e.keyCode === 57) {
+    KeyA9.classList.add('Active');
+  }
+  if (e.keyCode === 189) {
+    KeyA10.classList.add('Active');
+  }
+  if (e.keyCode === 187) {
+    KeyA11.classList.add('Active');
+  }
+  if (e.keyCode === 48) {
+    KeyA12.classList.add('Active');
+  }
   if (e.code === 'Backquote') {
     e.preventDefault();
     Backquote.classList.add('Active');
@@ -583,7 +631,7 @@ window.addEventListener('keydown', (e) => {
   if (e.code === 'Tab') {
     e.preventDefault();
     Tab.classList.add('Active');
-    KeyboardInput.value += ' ';
+    KeyboardInput.value += '\t';
   }
   if (e.code === 'AltLeft') {
     Notice = true;
@@ -699,6 +747,42 @@ window.addEventListener('keydown', (e) => {
 });
 
 window.addEventListener('keyup', (e) => {
+  if (e.keyCode === 49) {
+    KeyA1.classList.remove('Active');
+  }
+  if (e.keyCode === 50) {
+    KeyA2.classList.remove('Active');
+  }
+  if (e.keyCode === 51) {
+    KeyA3.classList.remove('Active');
+  }
+  if (e.keyCode === 52) {
+    KeyA4.classList.remove('Active');
+  }
+  if (e.keyCode === 53) {
+    KeyA5.classList.remove('Active');
+  }
+  if (e.keyCode === 54) {
+    KeyA6.classList.remove('Active');
+  }
+  if (e.keyCode === 55) {
+    KeyA7.classList.remove('Active');
+  }
+  if (e.keyCode === 56) {
+    KeyA8.classList.remove('Active');
+  }
+  if (e.keyCode === 57) {
+    KeyA9.classList.remove('Active');
+  }
+  if (e.keyCode === 189) {
+    KeyA10.classList.remove('Active');
+  }
+  if (e.keyCode === 187) {
+    KeyA11.classList.remove('Active');
+  }
+  if (e.keyCode === 48) {
+    KeyA12.classList.remove('Active');
+  }
   if (e.code === 'IntlBackslash') {
     IntSlash.classList.remove('Active');
   }
@@ -839,7 +923,7 @@ KeyboardOuter.addEventListener('click', (e) => {
   }
   if (e.target.innerHTML === 'TAB') {
     Tab.classList.add('Active');
-    KeyboardInput.value += ' ';
+    KeyboardInput.value += '\t';
     setTimeout(() => Tab.classList.remove('Active'), 200);
   }
 
