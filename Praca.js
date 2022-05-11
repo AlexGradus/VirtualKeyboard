@@ -15,7 +15,7 @@ divKeyboardGate4.className = 'KeyboardGate';
 const InputInside = document.createElement('textarea');
 InputInside.className = 'KeyboardInput';
 const Information = document.createElement('div');
-Information.innerHTML = 'Создано на MACos,переключение клавиатуры левый ALT+CTRL';
+Information.innerHTML = 'Создано на MAC,переключение клавиатуры левый ALT+CTRL';
 Information.className = 'Information';
 const Key1E = document.createElement('div');
 Key1E.className = 'Backquote';
@@ -941,7 +941,50 @@ KeyboardOuter.addEventListener('click', (e) => {
     if (ShiftPosition && CapsLock.classList.contains('Active')) {
       KeyboardInput.value += e.target.innerHTML.toLowerCase();
     } else if (ShiftPosition) {
-      KeyboardInput.value += e.target.innerHTML;
+      if (e.target.innerHTML === '1') {
+        KeyboardInput.value += '!';
+        return;
+      }
+      if (e.target.innerHTML === '2') {
+        KeyboardInput.value += '@';
+        return;
+      } if (e.target.innerHTML === '3') {
+        KeyboardInput.value += '#';
+        return;
+      } if (e.target.innerHTML === '4') {
+        KeyboardInput.value += '$';
+        return;
+      } if (e.target.innerHTML === '5') {
+        KeyboardInput.value += '%';
+        return;
+      } if (e.target.innerHTML === '6') {
+        KeyboardInput.value += '^';
+        return;
+      }
+      if (e.target.innerHTML === '7') {
+        KeyboardInput.value += '&';
+        return;
+      }
+      if (e.target.innerHTML === '8') {
+        KeyboardInput.value += '*';
+        return;
+      }
+      if (e.target.innerHTML === '9') {
+        KeyboardInput.value += '(';
+        return;
+      }
+      if (e.target.innerHTML === '0') {
+        KeyboardInput.value += ')';
+        return;
+      }
+      if (e.target.innerHTML === '-') {
+        KeyboardInput.value += '_';
+        return;
+      }
+      if (e.target.innerHTML === '=') {
+        KeyboardInput.value += '+';
+        return;
+      } KeyboardInput.value += e.target.innerHTML;
     } else if (CapsLock.classList.contains('Active')) {
       KeyboardInput.value += e.target.innerHTML;
     } else KeyboardInput.value += e.target.innerHTML.toLowerCase();
